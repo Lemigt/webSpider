@@ -56,7 +56,7 @@ def getData(url):
         allData += all_name[i]
         allData += ':'
         allData += all_content[i]
-        allData += '\n'
+        allData += '\n\n'
     print(allData)
 
     with open('糗事百科.txt', 'a+', encoding='utf-8') as f:
