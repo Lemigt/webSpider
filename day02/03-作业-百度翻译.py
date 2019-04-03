@@ -12,13 +12,7 @@ def translate(word):
         }
 
     data = {
-        # 'from': 'zh',
-        # 'to': 'en',
         'query': word,
-        # 'transtype': 'translang',
-        # 'simple_means_flag': 3,
-        # 'sign': 674107.961034,
-        # 'token': '0ff7bf640e94b31a9c02409cfcccce67',
         'source':'txt',
     }
 
@@ -32,7 +26,9 @@ def translate(word):
     mean = json_data.get('content')[0].get('mean')[0].get('cont')
 
 
-    print(mean)
+    # print(mean)
+    for k in mean:
+        print(k)
 
 
 
@@ -80,4 +76,6 @@ def translate(word):
 
 
 if __name__ == '__main__':
-    translate('why')
+    while True:
+        word = input('请输入英文：')
+        translate(word)
